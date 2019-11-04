@@ -1,1 +1,102 @@
+body {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
 
+h1{
+    padding: 60px;
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    background: #ffffff url(../img/geometry2.png);
+}
+
+#game-score,#game-board,#game-control {
+    width: 80vmin;
+    min-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #d9d9d987;
+    padding: 0.5em 1em;
+}
+
+
+#game-board {
+    /* height: 300px; */
+    min-height: 50vmin;
+}
+
+
+.card {
+    display: inline-block;
+    border: 1px solid #e44495a3;
+    width: 15vmin;
+    height: 12.5vmin;
+    margin: 2%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2rem;
+    line-height: 1.5em;
+    transition: 0.5s ease;
+}
+
+
+
+@media screen and (min-width: 700px) and (min-height: 700px) {
+    .card {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) and (min-height: 700px) {
+    .card {
+        font-size: 5rem;
+    }
+}
+
+
+.card.closed {
+    transform: rotateY(180deg);
+    background-color: #dc6a9f;
+}
+
+
+.card.flipped {
+    transform: rotateY(0deg);
+    background-color: rgb(216, 189, 201);
+}
+
+
+.card.matched {
+    opacity: 0.1;
+}
+
+
+.card.closed > span {
+    opacity: 0;
+}
+
+
+.card.flipped > span {
+    opacity: 1;
+    color: rgba(173, 42, 42, 0.81);
+}
+
+
+.card > span {
+    transition: 0.12s ease;
+    transition-delay: 0.12s;
+}
+
+
+#stars,#attempts {
+    text-align: center;
+    float: inherit;
+    font-weight: center;
+}
+
+
+.fa-star {
+    font-size: 1.25em;
+    color: #efb915;
+}
